@@ -5,7 +5,7 @@ createApp({
             productos: [],
             //url:'http://localhost:5000/productos',
             // si el backend esta corriendo local usar localhost 5000(si no lo subieron a pythonanywhere)
-            url: 'http://mcerda.pythonanywhere.com/productos', // si ya lo subieron a pythonanywhere
+            url: 'https://wolf2122.pythonanywhere.com/productos', // si ya lo subieron a pythonanywhere
             error: false,
             cargando: true,
             /*atributos para el guardar los valores del formulario */
@@ -56,7 +56,7 @@ createApp({
             fetch(this.url, options)
                 .then(function () {
                     alert("Registro grabado")
-                    window.location.href = "./productos.html";
+                    window.location.href = "../templates/productos.html";
                 })
                 .catch(err => {
                     console.error(err);

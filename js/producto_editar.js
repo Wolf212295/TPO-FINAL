@@ -10,7 +10,7 @@ createApp({
             imagen: "",
             stock: 0,
             precio: 0,
-            url: 'http://mcerda.pythonanywhere.com/productos/' + id,
+            url: 'https://wolf2122.pythonanywhere.com/productos/' +id,
         }
     },
     methods: {
@@ -19,10 +19,10 @@ createApp({
                 .then(response => response.json())
                 .then(data => {
                     console.log(data)
-                    this.id = data.id
+                    this.id = data.id,
                     this.nombre = data.nombre;
-                    this.imagen = data.imagen
-                    this.stock = data.stock
+                    this.imagen = data.imagen,
+                    this.stock = data.stock,
                     this.precio = data.precio
                 })
                 .catch(err => {
@@ -35,7 +35,7 @@ createApp({
                 nombre: this.nombre,
                 precio: this.precio,
                 stock: this.stock,
-                imagen: this.imagen
+                imagen: this.imagen,
             }
             var options = {
                 body: JSON.stringify(producto),
